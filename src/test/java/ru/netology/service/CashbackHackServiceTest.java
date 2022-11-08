@@ -14,4 +14,31 @@ public class CashbackHackServiceTest {
         int actual = service.remain(amount);
         assertEquals(actual,expected);
     }
+
+    @Test
+    public void testRemain1() {
+        int amount = 200;
+        int expected = 800;
+        CashbackHackService service = new CashbackHackService();
+        int actual = service.remain(amount);
+        assertEquals(actual,expected);
+    }
+
+    @Test
+    public void testRemain2() {
+        int amount = 0;
+        int expected = 1000;
+        CashbackHackService service = new CashbackHackService();
+        int actual = service.remain(amount);
+        assertEquals(actual,expected);
+    }
+
+    @Test
+    public void testRemain3() {
+        int amount = 2000;
+        int expected = 0;
+        CashbackHackService service = new CashbackHackService();
+        int actual = service.remain(amount);
+        assertEquals(actual,expected);
+    }
 }
